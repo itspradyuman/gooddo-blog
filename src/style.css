@@ -371,3 +371,7 @@ a:focus {
 ::-moz-selection{
   background: black;
 }
+small{
+color: white;
+font-size: 15px;
+}
