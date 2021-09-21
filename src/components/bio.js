@@ -36,19 +36,21 @@ const Bio = () => {
         className="bio-avatar"
         layout="fixed"
         formats={["auto", "webp", "avif"]}
-        src="../images/profile-pic.png"
+        src="../images/1x1-pro-pic.jpeg"
         width={50}
         height={50}
         quality={95}
         alt="Profile picture"
       />
       {author?.name && (
-        <p>
-          Written by <strong>{author.name}</strong> {author?.summary || null}
-          {` `}
-          <a href={`https://twitter.com/${social?.twitter || ``}`}>
-            You should follow them on Twitter
+        <p class="main-page">
+         Weaknotes by <a href={`https://twitter.com/${social?.twitter || ``}`}>
+          Pradhuman
           </a>
+            <p>
+              {author?.summary || null}
+               {` `}
+            </p>
         </p>
       )}
     </div>

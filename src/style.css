@@ -30,8 +30,8 @@
   --fontFamily-sans: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --fontFamily-serif: "Merriweather", "Georgia", Cambria, "Times New Roman",
-    Times, serif;
+  --fontFamily-serif:  "benton-sans", sans-serif;
+
   --font-body: var(--fontFamily-serif);
   --font-heading: var(--fontFamily-sans);
   --fontWeight-normal: 400;
@@ -44,7 +44,7 @@
   --lineHeight-none: 1;
   --lineHeight-tight: 1.1;
   --lineHeight-normal: 1.5;
-  --lineHeight-relaxed: 1.625;
+  --lineHeight-relaxed: 30.5px;
   /* 1.200 Minor Third Type Scale */
   --fontSize-0: 0.833rem;
   --fontSize-1: 1rem;
@@ -54,12 +54,22 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #005b99;
-  --color-text: #2e353f;
-  --color-text-light: #4f5969;
-  --color-heading: #1a202c;
-  --color-heading-black: black;
-  --color-accent: #d1dce5;
+  --color-primary: seagreen;
+  --color-text: #b2b2b2;
+  --color-text-light: grey;
+  --color-heading: #f2f2f2;
+  --color-heading-black: white;
+  --color-accent:  grey;
+  --color-background-dark: #1e1f21;
+
+/*--color-primary: white;
+  --color-text: #b2b2b2;
+  --color-text-light: grey;
+  --color-heading: #f2f2f2;
+  --color-heading-black: #f00048;
+  --color-accent: white;  */
+
+
 }
 
 /* HTML elements */
@@ -75,6 +85,7 @@ html {
   font-size: var(--fontSize-root);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-background-dark);
 }
 
 body {
@@ -123,6 +134,12 @@ h1 {
   color: var(--color-heading-black);
 }
 
+h1.blog-head {
+  font-weight: var(--fontWeight-black);
+  font-size: var(--fontSize-6);
+  color: white;
+}
+
 h2 {
   font-size: var(--fontSize-5);
 }
@@ -158,6 +175,10 @@ h6 > a {
 }
 
 /* Prose */
+section.blog-post{
+  color: #eeeeee;
+}
+
 
 p {
   line-height: var(--lineHeight-relaxed);
@@ -165,6 +186,15 @@ p {
   --x-height-multiplier: 0.35;
   margin: var(--spacing-0) var(--spacing-0) var(--spacing-8) var(--spacing-0);
   padding: var(--spacing-0);
+}
+
+p.main-page {
+  line-height: var(--lineHeight-relaxed);
+  --baseline-multiplier: 0.179;
+  --x-height-multiplier: 0.35;
+  margin: var(--spacing-0) var(--spacing-0) var(--spacing-8) var(--spacing-0);
+  padding: var(--spacing-0);
+  color: white;
 }
 
 ul,
@@ -233,7 +263,10 @@ a {
   color: var(--color-primary);
 }
 
-a:hover,
+a:hover{
+  color: white;
+  transition: ease 0.01s;
+}
 a:focus {
   text-decoration: none;
 }
@@ -330,4 +363,11 @@ a:focus {
   ol {
     list-style-position: inside;
   }
+}
+
+::selection{
+  background: seagreen;
+}
+::-moz-selection{
+  background: black;
 }

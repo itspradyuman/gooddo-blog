@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `GoodDo`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Pradhuman`,
+      summary: `An attempt at Documenting my Leanring and Experiences.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `To document my readings and experiences`,
+    siteUrl: `https://gooddo.netlify.app/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `pradhum4n`,
     },
   },
   plugins: [
@@ -120,7 +120,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/do-seagreen.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-react-helmet`,
